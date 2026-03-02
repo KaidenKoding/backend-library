@@ -6,6 +6,7 @@ import { UpdateBookDto } from './dto/update-book.dto';
 @Injectable()
 export class BooksService {
 constructor(private prisma: PrismaService) {}
+
 async create(dto: CreateBookDto) {
 return this.prisma.book.create({ data: dto });
 }
